@@ -18,6 +18,7 @@ docker-compose up
 ### Access the application at http://127.0.0.1:8000/
 
 **Step:** For Manually  Install
+
 **Step 2:** Install dependencies inside the repository
 ```
 composer install
