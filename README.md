@@ -11,6 +11,13 @@
 ```
 https://github.com/mashiurfpi/url_shortener.git
 ```
+**Step:** If Want to use Docker 
+```
+docker-compose up 
+```
+### Access the application at http://127.0.0.1:8000/
+
+**Step:** For Manually  Install
 **Step 2:** Install dependencies inside the repository
 ```
 composer install
@@ -55,6 +62,6 @@ npm run watch
 
 ### Link to Github repo.
 
-### [Github repository](https://github.com/mashiurfpi/url_shortener)
+### [Github repository](https://github.com/ashadbubt/url_shortener_docker)
 
 
