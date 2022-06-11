@@ -1,0 +1,32 @@
+version: '2.1'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build: .           
+        depends_on:
+            db:
+                condition: "service_healthy"
+        ports:
+            - 8181:8181
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 786asd
+            MYSQL_DATABASE: url_shortener
+            MYSQL_USER: ashad 
+            MYSQL_PASSWORD: 1234            
+        ports:
+            - "3301:3306"
+        expose:
+            - "3301"
+        healthcheck:
+            test: "/usr/bin/mysql --user=ashad --password=1234 --execute \"SHOW DATABASES;\""
+            # test: "/usr/local/mysql/bin/mysql --user=foo --password=foo --execute \"SHOW DATABASES;\""
+            interval: 3s
+            timeout: 1s
+            retries: 5
+            
+
+   
